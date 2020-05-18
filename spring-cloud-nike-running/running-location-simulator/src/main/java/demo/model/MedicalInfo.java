@@ -14,4 +14,5 @@ public class MedicalInfo {
     public MedicalInfo() {
 
     }
+
 }

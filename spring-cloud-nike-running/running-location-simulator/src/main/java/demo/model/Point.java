@@ -8,9 +8,7 @@ import lombok.Data;
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Point {
 
-    private Double latitude;
-    private Double longitude;
+    private double latitude;
+    private double longitude;
 
-    public Point() {
-    }
 }

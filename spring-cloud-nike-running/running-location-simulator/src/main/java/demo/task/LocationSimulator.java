@@ -17,22 +17,19 @@ public class LocationSimulator implements Runnable {
     private long id;
 
     @Setter
-    private PositionService positionInfoService;
+    private PositionService positionSerivce;
 
-    // flag for cancelling the simulation
     private AtomicBoolean cancel = new AtomicBoolean();
 
     private double speedInMps;
 
-    // determine whether the runner should continue to move or not.
-    // Say, if the runner has already got to his destination, shouldMove = false.
-    private boolean shouldMove;
+    private boolean shoudMove;
     private boolean exportPositionsToMessaging = true;
-    private Integer reportInterval = 500; // in ms
+    private Integer reportInterval=500;
 
     @Getter
     @Setter
-    private PositionInfo currentPosition = null;
+    private PositionInfo positionInfo = null;
 
     @Setter
     private List<Leg> legs;
@@ -45,47 +42,44 @@ public class LocationSimulator implements Runnable {
 
     private MedicalInfo medicalInfo;
 
-    public LocationSimulator(GpsSimulatorRequest gpsSimulatorRequest) {
-        this.shouldMove = gpsSimulatorRequest.isMove();
-        this.exportPositionsToMessaging =
-                gpsSimulatorRequest.isExportPositionsToMessaging();
+    public LocationSimulator(GpsSimulatorRequest gpsSimulatorRequest){
+        this.shoudMove = gpsSimulatorRequest.isMove();
+        this.exportPositionsToMessaging = gpsSimulatorRequest.isExportPositionsToMessaging();
         this.setSpeed(gpsSimulatorRequest.getSpeed());
         this.reportInterval = gpsSimulatorRequest.getReportInterval();
+
         this.runningId = gpsSimulatorRequest.getRunningId();
         this.runnerStatus = gpsSimulatorRequest.getRunnerStatus();
         this.medicalInfo = gpsSimulatorRequest.getMedicalInfo();
     }
 
-    public void setSpeed(double speed) {
-        this.speedInMps = speed;
-    }
 
     @Override
     public void run() {
-        try {
+        try{
             executionStartTime = new Date();
-            if (cancel.get()) {
-                destroy();
+            if (cancel.get()){
+                destory();
                 return;
             }
 
-            while (!Thread.interrupted()) {
+            while(!Thread.interrupted()){
                 long startTime = new Date().getTime();
 
-                if (currentPosition != null) {
-                    if (shouldMove) {
+                if(positionInfo!=null){
+                    if(shoudMove){
                         moveRunningLocation();
-                        currentPosition.setSpeed(speedInMps);
-                    } else {
-                        // arrived destination
-                        currentPosition.setSpeed(0.0);
+                        positionInfo.setSpeed(speedInMps);
+                    }
+                    else{
+                        positionInfo.setSpeed(0.0);
                     }
 
-                    currentPosition.setRunnerStatus(this.runnerStatus);
+                    positionInfo.setRunnerStatus(this.runnerStatus);
 
                     final MedicalInfo medicalInfoToUse;
 
-                    switch (this.runnerStatus) {
+                    switch (this.runnerStatus){
                         case SUPPLY_NOW:
                         case SUPPLY_SOON:
                         case STOP_NOW:
@@ -96,86 +90,86 @@ public class LocationSimulator implements Runnable {
                             break;
                     }
 
-                    // construct current position that will be sent to distribution service
-                    final CurrentPosition currentPosition = new
-                            CurrentPosition(this.currentPosition.getRunningId(),
-                            new
-                                    Point(this.currentPosition.getPosition().getLatitude(),
-                                    this.currentPosition.getPosition().getLongitude()),
-                            this.currentPosition.getRunnerStatus(),
-                            this.currentPosition.getSpeed(),
-                            this.currentPosition.getLeg().getHeading(),
+                    final CurrentPosition currentPosition = new CurrentPosition(this.positionInfo.getRunningId(),
+                            new Point(this.positionInfo.getPosition().getLatitude(), this.positionInfo.getPosition().getLongitude()),
+                            this.positionInfo.getRunnerStatus(),
+                            this.positionInfo.getSpeed(),
+                            this.positionInfo.getLeg().getHeading(),
                             medicalInfoToUse
                     );
 
                     // send current position to distribution service via REST API
                     // @TODO implement positionInfoService
-                    positionInfoService.processPositionInfo(id, currentPosition,
-                            this.exportPositionsToMessaging);
+                    positionSerivce.processPositionInfo(id, currentPosition, this.exportPositionsToMessaging);
+
                 }
 
+                // wait until next position report
                 sleep(startTime);
             }
-        } catch (InterruptedException ie) {
-            destroy();
+        }
+        catch(InterruptedException ie){
+            destory();
             return;
         }
-
-        destroy();
+        destory();
     }
 
-    public void destroy() {
-        currentPosition = null;
+    void destory(){
+        positionInfo = null;
     }
 
-    public double getSpeed() {
-        return this.speedInMps;
-    }
-
-    public synchronized void cancel() {
-        this.cancel.set(true);
-    }
-
-    private void sleep(long startTime) throws InterruptedException {
+    private void sleep(long startTime) throws InterruptedException{
         long endTime = new Date().getTime();
         long elapsedTime = endTime - startTime;
-        long sleepTime = reportInterval - elapsedTime > 0 ? reportInterval - elapsedTime : 0;
+        long sleepTime = reportInterval - elapsedTime > 0 ? reportInterval - elapsedTime : 0 ;
         Thread.sleep(sleepTime);
     }
 
-    private void moveRunningLocation() {
-        double distance = speedInMps * reportInterval / 1000.0;
-        double distanceFromStart = currentPosition.getDistanceFromStart() + distance;
+    // Set new position of running location based on current position and running speed
+    private void moveRunningLocation(){
+        double distance  = speedInMps * reportInterval / 1000.0;
+        double distanceFromStart = positionInfo.getDistanceFromStart() + distance;
         double excess = 0.0;
 
-        for (int i = currentPosition.getLeg().getId(); i < legs.size(); i++) {
+        for (int i=positionInfo.getLeg().getId(); i<legs.size(); i++){
             Leg currentLeg = legs.get(i);
             excess = distanceFromStart > currentLeg.getLength() ? distanceFromStart - currentLeg.getLength() : 0.0;
 
-            if (Double.doubleToLongBits(excess) == 0) {
+            if(Double.doubleToRawLongBits(excess) == 0){
                 // this means new position falls within current leg
-                currentPosition.setDistanceFromStart(distanceFromStart);
-                currentPosition.setLeg(currentLeg);
-                //@TODO implement the new position calculation method in NavUtils
-
-                Point newPosition =
-                        NavUtils.getPosition(currentLeg.getStartPosition(), distanceFromStart,
-                                currentLeg.getHeading());;
-                currentPosition.setPosition(newPosition);
+                positionInfo.setDistanceFromStart(distanceFromStart);
+                positionInfo.setLeg(currentLeg);
+                //Use the new position calcuation method in NavUtils
+                Point newPosition = NavUtils.getPosition(currentLeg.getStartPosition(), distanceFromStart, currentLeg.getHeading());
+                positionInfo.setPosition(newPosition);
                 return;
             }
             distanceFromStart = excess;
         }
+
         setStartPosition();
     }
 
     // Position running location at start of path
-    private void setStartPosition() {
-        currentPosition = new PositionInfo();
-        currentPosition.setRunningId(this.runningId);
+    public void setStartPosition(){
+        positionInfo = new PositionInfo();
+        positionInfo.setRunningId(this.runningId);
         Leg leg = legs.get(0);
-        currentPosition.setLeg(leg);
-        currentPosition.setPosition(leg.getStartPosition());
-        currentPosition.setDistanceFromStart(0.0);
+        positionInfo.setLeg(leg);
+        positionInfo.setPosition(leg.getStartPosition());
+        positionInfo.setDistanceFromStart(0.0);
+    }
+
+    public void setSpeed(double speed){
+        this.speedInMps = speed;
+    }
+
+    public double getSpeed(){
+        return this.speedInMps;
+    }
+
+    public synchronized void cancel(){
+        this.cancel.set(true);
     }
 }

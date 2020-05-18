@@ -9,6 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>running-location-simulator</module>
+        <module>running-location-distribution</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -13,4 +13,5 @@ public class GpsSimulatorRequest {
     private RunnerStatus runnerStatus = RunnerStatus.NONE;
     private String polyline;
     private MedicalInfo medicalInfo;
+
 }

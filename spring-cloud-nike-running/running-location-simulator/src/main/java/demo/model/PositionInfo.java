@@ -13,5 +13,7 @@ public class PositionInfo {
     private double speed;
 
     public PositionInfo() {
+
     }
+
 }

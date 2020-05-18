@@ -9,12 +9,14 @@ import lombok.Data;
 public class CurrentPosition {
 
     private String runningId;
-    private Point location; // current location
+    private Point location;
     private RunnerStatus runnerStatus = RunnerStatus.NONE;
     private double speed;
     private double heading;
     private MedicalInfo medicalInfo;
 
-    public CurrentPosition(){
+    public CurrentPosition() {
+
     }
+
 }
