@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="583ffcfd-4a92-4ea5-a2f9-8cf6056e3a78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/running-location-updater/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/java/demo/RunningLocationUpdaterApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/java/demo/RunningLocationUpdaterSink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-distribution/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
@@ -106,8 +100,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunningLocationUpdaterApplication" />
-        <item itemvalue="Application.RunningLocationDistributionApplication" />
         <item itemvalue="Application.SimulatorServiceApplication" />
+        <item itemvalue="Application.RunningLocationDistributionApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -130,25 +124,25 @@
     </state>
     <state x="2866" y="268" key="#com.intellij.ide.util.MemberChooser/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589738750398" />
     <state x="2866" y="268" key="#com.intellij.ide.util.MemberChooser/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589821367426" />
-    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1589833387689">
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1589918939984">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1108" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589918939984" />
     <state width="1259" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387689" />
-    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1589833387688">
+    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1589918939983">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1108" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
+    <state width="1259" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589918939983" />
     <state width="1259" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387688" />
-    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1589833387687">
+    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1589918939982">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1108" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
+    <state width="1259" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589918939982" />
     <state width="1259" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387687" />
-    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1589833387688">
+    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1589918939984">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1108" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
+    <state width="1259" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589918939984" />
     <state width="1259" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387688" />
     <state x="2459" y="249" key="new project wizard" timestamp="1589832941126">
       <screen x="1680" y="23" width="1920" height="1057" />
