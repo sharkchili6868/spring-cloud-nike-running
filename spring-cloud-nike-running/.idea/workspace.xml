@@ -2,47 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="583ffcfd-4a92-4ea5-a2f9-8cf6056e3a78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-distribution/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-distribution/src/main/java/demo/RunnerPositionSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-distribution/src/main/java/demo/RunningLocationDistributionApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-distribution/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/SimulatorInitLocations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/rest/LocationSimulatorRestApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/GpsSimulatorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/PathService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/impl/DefaultGpsSimulatorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/impl/DefaultPathService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/task/LocationSimulatorInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/running-location-simulator/src/main/resources/init-locations.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running-location-updater/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/java/demo/RunningLocationUpdaterApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/java/demo/RunningLocationUpdaterSink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/running-location-updater/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/SimulatorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/SimulatorServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/CurrentPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/CurrentPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/GpsSimulatorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/GpsSimulatorRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/Leg.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/Leg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/MedicalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/MedicalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/PositionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/model/PositionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/PositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/PositionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/impl/DefaultPositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/service/impl/DefaultPositionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/support/NavUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/support/NavUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/task/LocationSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/src/main/java/demo/task/LocationSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/SimulatorServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/SimulatorServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/CurrentPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/CurrentPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/Leg.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/Leg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/PositionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/model/PositionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/service/impl/DefaultPositionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/service/impl/DefaultPositionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/support/NavUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/support/NavUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/task/LocationSimulator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/task/LocationSimulator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/task/LocationSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/classes/demo/task/LocationSimulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/running-location-distribution/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-distribution/target/running-location-distribution-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-simulator/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running-location-simulator/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-simulator/target/running-location-simulator-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/running-location-simulator-1.0.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/running-location-simulator/target/running-location-simulator-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/running-location-simulator/target/running-location-simulator-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -92,10 +63,23 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.SimulatorServiceApplication">
+  <component name="RunManager" selected="Application.RunningLocationUpdaterApplication">
     <configuration name="RunningLocationDistributionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo.RunningLocationDistributionApplication" />
       <module name="running-location-distribution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunningLocationUpdaterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo.RunningLocationUpdaterApplication" />
+      <module name="running-location-updater" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="demo.*" />
@@ -121,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunningLocationUpdaterApplication" />
         <item itemvalue="Application.RunningLocationDistributionApplication" />
         <item itemvalue="Application.SimulatorServiceApplication" />
       </list>
@@ -145,30 +130,30 @@
     </state>
     <state x="2866" y="268" key="#com.intellij.ide.util.MemberChooser/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589738750398" />
     <state x="2866" y="268" key="#com.intellij.ide.util.MemberChooser/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589821367426" />
-    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1589832847998">
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom" timestamp="1589833387689">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1108" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
-    <state width="1259" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589832847998" />
-    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1589832847997">
+    <state width="1259" height="290" key="GridCell.Tab.0.bottom/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387689" />
+    <state width="1259" height="290" key="GridCell.Tab.0.center" timestamp="1589833387688">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1108" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
-    <state width="1259" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589832847997" />
-    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1589832847997">
+    <state width="1259" height="290" key="GridCell.Tab.0.center/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387688" />
+    <state width="1259" height="290" key="GridCell.Tab.0.left" timestamp="1589833387687">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1108" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
-    <state width="1259" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589832847997" />
-    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1589832847998">
+    <state width="1259" height="290" key="GridCell.Tab.0.left/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387687" />
+    <state width="1259" height="290" key="GridCell.Tab.0.right" timestamp="1589833387688">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1108" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589766036405" />
-    <state width="1259" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589832847998" />
-    <state x="2459" y="249" key="new project wizard" timestamp="1589822874420">
+    <state width="1259" height="290" key="GridCell.Tab.0.right/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589833387688" />
+    <state x="2459" y="249" key="new project wizard" timestamp="1589832941126">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="2459" y="249" key="new project wizard/1680.23.1920.1057/60.23.1620.1027@1680.23.1920.1057" timestamp="1589735464729" />
-    <state x="2459" y="249" key="new project wizard/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589822874420" />
+    <state x="2459" y="249" key="new project wizard/1680.23.1920.1057/62.23.1618.1027@1680.23.1920.1057" timestamp="1589832941126" />
   </component>
 </project>
